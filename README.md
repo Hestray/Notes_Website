@@ -28,8 +28,6 @@ The backend is done using PHP (v8.3.30), with MySQL (v8.4.3). Using Apache (v2.4
 
 `public\` - contains media: images, background photos, profile pictures, and documents (such as pdfs). Currently the documents are not utilized.
 
-`issues\` - contains screenshots of the existing or solved issues flagged in ISSUES.md.
-
 ## Database structure
 There is no current database. Once there is, I will add its structure here.
 
