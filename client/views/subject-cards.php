@@ -1,12 +1,10 @@
 <!-- This contains the display in which the subjects appear -->
-
+<?php
+    $subjects = $db->query("SELECT * FROM subjects;", [])->fetchAll();
+?>
 <section class="subject-display">
-    <?php
-        $subjects = $db->query("SELECT * FROM subjects;", [])->fetchAll();
-    ?>
-
     <?php foreach ($subjects as $sub) : ?>
-        <section class="subject-card">
+        <a href=<?= $sub['redirect'] ?>><section class="subject-card">
             <figure class="subject-icon">
                 <img src=<?= "public\\media\\{$sub['icon']}" ?> alt=<?= $sub['icon-alt'] ?>>
             </figure>
@@ -17,6 +15,6 @@
             <p class="subject-description">
                 <?= $sub['description'] ?>
             </p>
-        </section>
+        </section></a>
     <?php endforeach ?>
 </section>
